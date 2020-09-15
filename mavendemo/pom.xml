@@ -4,6 +4,8 @@
 	<groupId>mavendemo</groupId>
 	<artifactId>mavendemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -32,6 +34,14 @@
 			<version>6.9.10</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
 
 	</dependencies>
 </project>

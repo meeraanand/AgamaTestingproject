@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoketesting"/>
-        <exclude name="retesting"/>
-      </run>
-    </groups>
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="TestOnGmail(failed)" parallel="tests">
+    <parameter name="browserName" value="gmail"/>
     <classes>
-      <class name="com.testng.DependsOnGroups">
+      <class name="com.homework.testcases.testng_hw">
         <methods>
-          <include name="search"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="facebook"/>
         </methods>
-      </class> <!-- com.testng.DependsOnGroups -->
+      </class> <!-- com.homework.testcases.testng_hw -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestOnGmail(failed) -->
+  <test name="TestOnFacebook(failed)" parallel="tests">
+    <parameter name="browserName" value="facebook"/>
+    <classes>
+      <class name="com.homework.testcases.testng_hw">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="facebook"/>
+        </methods>
+      </class> <!-- com.homework.testcases.testng_hw -->
+    </classes>
+  </test> <!-- TestOnFacebook(failed) -->
 </suite> <!-- Failed suite [Suite] -->

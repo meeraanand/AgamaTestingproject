@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test name="Test">
-  <groups>
-    <run>
-      <include name="smoketesting"/>
-        <include name="retesting"/>
-      <exclude name="sanitytesting"/>
-    </run>
-  </groups>
-  
+<suite name="Suite" parallel="tests" thread-count="2">
+  <test name="TestOnFacebook">
+  <parameter name ="browserName" value = "facebook"></parameter>
     <classes>
-      <class name="com.testng.DependsOnGroups"/>
+      <class name="com.homework.testcases.testng_hw"/>
     </classes>
-  </test> <!-- Test -->
+  </test>
+  
+  <test name="TestOnGmail">
+  <parameter name ="browserName" value = "gmail"></parameter>
+    <classes>
+      <class name="com.homework.testcases.testng_hw"/>
+    </classes>
+  </test>
+  
+   <!-- Test -->
 </suite> <!-- Suite -->

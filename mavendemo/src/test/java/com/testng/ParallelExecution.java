@@ -1,8 +1,14 @@
 package com.testng;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class ParallelExecution {
+	
+	@BeforeTest
+	public void setup(){
+		
+	}
 	
 	@Test()
 	public void testcase1(){
